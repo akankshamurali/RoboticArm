@@ -1,0 +1,14 @@
+Power is supplied to the sensors, arduino, motors and drivers. 
+The brain of the system is arduino which interfaces with rosserial through 
+which commands are given to the ros drivers. The drivers in turn give an input
+to the motors which drives the motor controllers and controls the robotic arm.
+The feebcak from the arm is sent back to the arduino and the cycle goes on
+
+Existing robots do not cater for floor to floor movements. For enabling
+the robot to move between floors we use two methods for the arm to press 
+the buttons:
+1)by making the robot press the elevator button that looks similar
+ to the image that has been input.
+2)by calculating the distance from the top of the ground to the first 
+button on the elevator and the distance between each button on the elevator.
+the distance can be mapped for the arm to press a specific button
